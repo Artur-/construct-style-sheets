@@ -117,6 +117,11 @@ describe('Constructible Style Sheets polyfill', () => {
           )
         )
       });
+      it('applies to elements created during polyfill loading', async () => {
+        const host = document.querySelector('#added-while-loading');
+        const span = host.shadowRoot.firstElementChild;
+        expect(getComputedStyle(span).color).toBe('blue');
+      });
     });
 
     describe('replaceSync', () => {

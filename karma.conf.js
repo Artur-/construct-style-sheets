@@ -41,6 +41,7 @@ module.exports = config => {
     files: [
       {pattern: 'test/polyfills.js', watched: false},
       {pattern: 'src/index.js', watched: false},
+      {pattern: 'test/init-while-loading.js', watched: false},
       {pattern: 'test/polyfill.test.js', watched: false},
     ],
 
